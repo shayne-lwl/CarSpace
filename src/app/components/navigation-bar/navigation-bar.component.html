@@ -1,4 +1,23 @@
 <nav class="nav-bar-container">
-  <span class="font-extrabold text-4xl">WHERE TO PARK SIA</span>
-  <theme-toggle />
+  <img
+    [ngSrc]="
+      themeState() === 'dark'
+        ? 'assets/icons/car-space-logo-dark.svg'
+        : 'assets/icons/car-space-logo.svg'
+    "
+    alt="CarSpace Logo"
+    width="200"
+    height="200"
+    priority
+  />
+  <span class="font-bold text-xl">CAR PARKS</span>
+  <!-- Search bar placeholder -->
+  <span></span>
+  <div class="right-section">
+    <div class="authentication-buttons">
+      <button class="login-btn">LOG IN</button>
+      <button class="signup-btn shadow-lg">SIGN UP</button>
+    </div>
+    <theme-toggle />
+  </div>
 </nav>

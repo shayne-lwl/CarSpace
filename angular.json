@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "wheretoparksia": {
+    "CarSpace": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/wheretopark",
+            "outputPath": "dist/CarSpace",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "wheretoparksia:build:production"
+              "buildTarget": "CarSpace:build:production"
             },
             "development": {
-              "buildTarget": "wheretoparksia:build:development"
+              "buildTarget": "CarSpace:build:development"
             }
           },
           "defaultConfiguration": "development"

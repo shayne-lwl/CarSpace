@@ -1,13 +1,7 @@
 .theme-toggle-container {
   border-radius: 999px;
   position: relative;
-  background-color: #1a1a1d;
   transition: background-color 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
 }
 
 .sun,
@@ -16,8 +10,11 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out,
-    width 0.3s ease-in-out, height 0.3s ease-in-out;
+  transition:
+    transform 0.5s ease-in-out,
+    opacity 0.5s ease-in-out,
+    width 0.3s ease-in-out,
+    height 0.3s ease-in-out;
 }
 
 .sun {

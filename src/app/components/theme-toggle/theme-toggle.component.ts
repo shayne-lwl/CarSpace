@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, Signal, inject } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { ThemeToggleService } from '../../services/theme-toggle.service';
@@ -10,16 +10,12 @@ import { ThemeToggleService } from '../../services/theme-toggle.service';
   imports: [CommonModule, MatIcon],
 })
 export class ThemeToggle implements OnInit {
-  themeState = signal<'light' | 'dark'>('light');
-
-  constructor(private themeToggleService: ThemeToggleService) {}
+  themeToggleService: ThemeToggleService = inject(ThemeToggleService);
+  themeState = this.themeToggleService.theme;
 
   ngOnInit(): void {}
 
   toggleTheme(): void {
-    // keep state changes declarative; template binds classes to icons
-    const next = this.themeState() === 'light' ? 'dark' : 'light';
-    this.themeState.set(next);
     this.themeToggleService.toggle();
   }
 }

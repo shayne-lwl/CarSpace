@@ -1,12 +1,42 @@
 .nav-bar-container {
   width: 100vw;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto 1fr 3fr 2fr;
   align-items: center;
+  justify-items: center;
   padding: 2rem 4rem;
 }
 
 span {
-  flex: 1;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 900;
   text-align: center;
+}
+
+.right-section {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-self: end;
+
+  .authentication-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    position: relative;
+
+    button {
+      padding: 0.5rem 1.5rem;
+      border-radius: 10px;
+      font-family: "Satoshi", sans-serif;
+      font-weight: 900;
+    }
+
+    .signup-btn {
+      background-color: var(--mat-sys-primary);
+      color: var(--mat-sys-on-primary);
+    }
+  }
 }
